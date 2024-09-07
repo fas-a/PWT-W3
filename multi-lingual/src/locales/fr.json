@@ -1,0 +1,8 @@
+{
+    "welcome": "Bienvenue",
+    "date": "La date d'aujourd'hui est {{date}}",
+    "time": "L'heure actuelle est {{time}}",
+    "currency": "Le prix est {{price}}",
+    "number": "Le compte est {{count}}"
+  }
+  
