@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross Browser Compatibility Experiment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>Cross-Browser Compatibility</h1>
+    
+    <!-- Progressive Enhancement Section -->
+    <section id="progressive-enhancement">
+        <h2>Progressive Enhancement Form</h2>
+        <form id="simple-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+            <button type="submit">Submit</button>
+        </form>
+        <div id="form-message"></div>
+    </section>
+
+    <!-- Graceful Degradation Section -->
+    <section id="graceful-degradation">
+        <h2>Graceful Degradation Example</h2>
+        <p id="modern-feature">This content requires modern JavaScript features.</p>
+        <noscript>
+            <p>JavaScript is disabled or not supported. Basic functionality is available but advanced features are missing.</p>
+        </noscript>
+    </section>
+
+    <script src="polyfills/array-from-polyfill.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
