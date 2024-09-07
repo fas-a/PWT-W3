@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test JSONP</title>
+</head>
+<body>
+    <h1>JSONP Test</h1>
+    <script>
+        function handleResponse(data) {
+            console.log("Received data via JSONP:", data);
+            document.body.innerHTML += `<p>Data: ${data.message}</p>`;
+        }
+
+        const script = document.createElement('script');
+        script.src = 'http://localhost:3001/data?callback=handleResponse';
+        document.head.appendChild(script);
+    </script>
+</body>
+</html>

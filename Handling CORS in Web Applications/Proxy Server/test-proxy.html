@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Proxy Server</title>
+</head>
+<body>
+    <h1>Proxy Server Test</h1>
+    <script>
+        fetch('http://localhost:3002/proxy')
+            .then(response => response.json())
+            .then(data => {
+                console.log("Received data via Proxy Server:", data);
+                document.body.innerHTML += `<p>Data: ${JSON.stringify(data.entries[0])}</p>`;
+            })
+            .catch(error => console.error("Error fetching data via proxy:", error));
+    </script>
+</body>
+</html>
